@@ -1,10 +1,14 @@
-#define UNICODE
-#define _UNICODE
-
-#define PSAPI_VERSION 1  // for use psapi.lib
-
 #pragma comment(lib, "advapi32.lib")
 #pragma comment(lib, "psapi.lib")
+
+#ifndef _UNICODE
+#define _UNICODE
+#endif
+#ifndef UNICODE
+#define UNICODE
+#endif
+
+#define PSAPI_VERSION 1  // for use psapi.lib
 
 #include <windows.h>
 #include <wchar.h>
